@@ -6,6 +6,6 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./data:/srv
-      - ./database:/database
-      - ./config:/config
+      - ./data:/data/Filebrowser
+      - ./database:/data/Filebrowser/database
+      - ./config:/data/Filebrowser/config
