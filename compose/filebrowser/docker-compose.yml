@@ -6,8 +6,6 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./data:/data/Filebrowser
-      - ./database:/data/Filebrowser/database
-    environment:
-      - PUID=1000
-      - PGID=1000
+      - ./data:/srv
+      - ./database:/database
+      - ./config:/config
