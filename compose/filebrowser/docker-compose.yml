@@ -6,6 +6,11 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - /data/Filebrowser:/srv
-      - ./database:/database
-      - ./config:/config
+      - filebrowser-data:/srv
+      - filebrowser-database:/database
+      - filebrowser-config:/config
+
+volumes:
+  filebrowser-data:
+  filebrowser-database:
+  filebrowser-config:
