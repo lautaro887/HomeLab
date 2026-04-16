@@ -7,7 +7,7 @@ services:
       - "8081:80"
     volumes:
       - ./data:/data/Filebrowser
-      - ./database:./database
+      - ./database:/data/Filebrowser/database
     environment:
       - PUID=1000
       - PGID=1000
