@@ -6,7 +6,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - /data1:/srv
+      - /data:/srv
       - ~/homelab/filebrowser/config/filebrowser.db:/database.db
     environment:
       - TZ=America/Argentina/Mendoza
