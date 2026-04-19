@@ -4,11 +4,10 @@ services:
     container_name: filebrowser
     restart: unless-stopped
     ports:
-      - "8081:80"
+      - "8080:80"
     volumes:
-      - /data/Filebrowser:/srv
-      - ./database:/database
-      - ./config:/config
+      - /data1:/srv
+      - ~/homelab/filebrowser/config/filebrowser.db:/database.db
     environment:
-      - PUID=1000
-      - PGID=1000
+      - TZ=America/Argentina/Mendoza
+    mem_limit: 64m

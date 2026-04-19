@@ -1,0 +1,15 @@
+services:
+  samba:
+    image: dperson/samba:latest
+    container_name: samba
+    restart: unless-stopped
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - /data1:/data
+    environment:
+      - TZ=America/Argentina/Mendoza
+      - USER=lautaro;qwerty41252483
+      - SHARE=Archivos;/data;yes;no;no;lautaro
+    mem_limit: 128m
